@@ -699,7 +699,7 @@ func resourceKubernetesCluster() *pluginsdk.Resource {
 			"role_based_access_control_enabled": {
 				Type:     pluginsdk.TypeBool,
 				Optional: true,
-				Default:  true,
+				Default:  features.ThreePointOh(),
 				ForceNew: true,
 				ConflictsWith: func() []string {
 					if !features.ThreePointOhBeta() {
