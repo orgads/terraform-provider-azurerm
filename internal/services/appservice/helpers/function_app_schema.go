@@ -1120,7 +1120,7 @@ func linuxFunctionAppStackSchema() *pluginsdk.Schema {
 						"site_config.0.application_stack.0.docker",
 						"site_config.0.application_stack.0.use_custom_runtime",
 					},
-					Description: "The version of Node to use. Possible values include `12`, `14`, `16`, `18` and `20`",
+					Description: "The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22` (In-Preview)",
 				},
 
 				"powershell_core_version": {
@@ -1366,6 +1366,7 @@ func windowsFunctionAppStackSchema() *pluginsdk.Schema {
 						"~16",
 						"~18",
 						"~20",
+						"~22",
 					}, false),
 					ExactlyOneOf: []string{
 						"site_config.0.application_stack.0.dotnet_version",
@@ -1374,7 +1375,7 @@ func windowsFunctionAppStackSchema() *pluginsdk.Schema {
 						"site_config.0.application_stack.0.powershell_core_version",
 						"site_config.0.application_stack.0.use_custom_runtime",
 					},
-					Description: "The version of Node to use. Possible values include `12`, `14`, `16` and `18`",
+					Description: "The version of Node to use. Possible values include `~12`, `~14`, `~16`, `~18`, `~20` and `~22` (In-Preview)",
 				},
 
 				"java_version": {
